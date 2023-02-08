@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $result = mysqli_query($conn, "SELECT * FROM tb_users WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
 
     // cek username
     if (mysqli_num_rows($result) === 1) {
@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-18">
-                <div class="card" style="width: 20rem;">
+                <div class="card " style="width: 20rem;">
                     <div class="card-header"> Login Page </div>
                     <div class="card-body">
                         <form method="post">
