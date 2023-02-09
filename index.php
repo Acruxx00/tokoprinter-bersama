@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT * FROM tb_users WHERE username = '$username'");
 
     // cek username
     if (mysqli_num_rows($result) === 1) {
