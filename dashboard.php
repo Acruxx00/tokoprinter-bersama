@@ -33,15 +33,6 @@ if (isset($_SESSION["name"])) {
 
     <br>
 
-    <!-- tombol tambah barang -->
-    <?php if ($super_user == true) : ?>
-        <div class="container-fluid">
-            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-targer="#tambahBarang">
-                Tambah Barang
-            </button>
-        </div>
-    <?php endif; ?>
-
     <h5><?php $error; ?></h5>
     <!-- mengambil data dari db -->
     <div class="row">
@@ -124,34 +115,7 @@ if (isset($_SESSION["name"])) {
         <?php endwhile; ?>
     </div>
 
-    <!-- Modal tambah-->
-    <div class="modal fade" id="tambahBarang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Produk</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <input type="text" placeholder="Nama Produk" name="produk" class="form-control" required><br>
-                        <input type="text" placeholder="Harga" name="harga" class="form-control" required><br>
-                        <input type="number" placeholder="Stok" name="stok" class="form-control" required><br>
-                        <input type="text" placeholder="Deskripsi" name="deskripsi" class="form-control" required><br>
-                        <input type="file" name="gambar" class="form-control" required><br>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" name="btntambahproduk">Tambah</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

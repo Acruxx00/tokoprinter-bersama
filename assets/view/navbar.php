@@ -9,7 +9,7 @@ if (isset($_SESSION["name"])) {
 
 ?>
 
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark"">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Toko Printer Bersama</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,11 @@ if (isset($_SESSION["name"])) {
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="dashboard.php"> Home </a>
                 </li>
+                <?php if ($super_user == true) : ?>
+                <li class="nav-item">
+                    <a href="tambahbarang.php" class="nav-link active"> Tambah Barang </a>
+                </li>
+                <?php endif; ?>
                 <?php if ($super_user == false) : ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="#"> Konfirmasi Transaksi </a>
@@ -36,7 +41,7 @@ if (isset($_SESSION["name"])) {
                     </li>
                 <?php endif; ?>
             </ul>
-            <a href="logout.php" class="btn btn-outline-primary text-dark" type="submit">Logout</a>
+            <a href="logout.php" class="btn btn-primary text-dark" type="submit">Logout</a>
         </div>
     </div>
 </nav>
